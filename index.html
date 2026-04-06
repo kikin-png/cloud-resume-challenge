@@ -1,0 +1,36 @@
+<html>
+<head>
+    <title>My Cloud Resume</title>
+    <style>
+        body { font-family: Helvetica, sans-serif; text-align: center; padding: 50px; }
+        h1 { color: #FF9900; } /* AWS Orange */
+        .card { border: 1px solid #ddd; padding: 20px; border-radius: 10px; display: inline-block; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>John Carlo Espregante</h1>
+        <p>Cloud Architect in Training | AWS Certified</p>
+        <hr>
+        <p>Welcome to my cloud resume.</p>
+		   <p>Syempre ako ragud ni, ang pinakabagsik sakatanan</p>
+<p><b>Hosted on:</b> Amazon S3 | <b>Visitors:</b> <span id="counter">Loading...</span></p>
+
+    </div>
+	<script>
+    const counter = document.getElementById("counter");
+    async function updateCounter() {
+        try {
+            // REPLACE WITH YOUR API GATEWAY URL
+            let response = await fetch("https://5tgkcu8z77.execute-api.us-east-1.amazonaws.com/count");
+            let data = await response.json();
+            counter.innerHTML = data.count;
+        } catch (e) {
+            counter.innerHTML = "Error";
+        }
+    }
+    updateCounter();
+</script>
+
+</body>
+</html>
