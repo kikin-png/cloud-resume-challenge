@@ -1,37 +1,61 @@
+<!DOCTYPE html>
 <html>
-<head> <link rel="stylesheet" href="style.css">
-    
-    <title>My Cloud Resume</title>
-    <style>
-        body { font-family: Helvetica, sans-serif; text-align: center; padding: 50px; }
-        h1 { color: #FF9900; } /* AWS Orange */
-        .card { border: 1px solid #ddd; padding: 20px; border-radius: 10px; display: inline-block; }
-    </style>
- </head>
+<head>
+    <title>John Carlo Espregante - Cloud Resume</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for Icons (Optional) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
 <body>
-    <div class="card">
+    <div class="main-container">
+        <!-- HEADER SECTION -->
         <h1>John Carlo Espregante</h1>
-        <p>Cloud Architect in Training | AWS Certified</p>
-        <hr>
-        <p>Welcome to my cloud resume.</p>
-		   <p>Syempre ako ragud ni, ang pinakabagsik sakatanan</p>
-<p><b>Hosted on:</b> Amazon S3 | <b>Visitors:</b> <span id="counter">Loading...</span></p>
+        <p class="subtitle">Cloud Architect in Training | AWS Certified</p>
+        
+        <div class="divider"></div>
 
+        <!-- SKILLS SECTION -->
+        <div class="section">
+            <h3><i class="fas fa-bolt"></i> Skills</h3>
+            <p>AWS (Lambda, S3, API Gateway, DynamoDB) • Python • CI/CD • Linux • Terraform</p>
+        </div>
+
+        <!-- CERTIFICATIONS SECTION -->
+        <div class="section">
+            <h3><i class="fas fa-certificate"></i> Certifications</h3>
+            <ul style="list-style: none; padding: 0;">
+                <li>AWS Certified Cloud Practitioner (2025)</li>
+                <li>AWS Certified Solutions Architect (In Progress)</li>
+            </ul>
+        </div>
+
+        <!-- EXPERIENCE SECTION -->
+        <div class="section">
+            <h3><i class="fas fa-briefcase"></i> Experience</h3>
+            <p><strong>IT Specialist</strong> | 2023 - Present</p>
+            <p>Managing network infrastructure and cloud migrations for enterprise clients.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- FOOTER & COUNTER -->
+        <p id="counter-container">
+            Hosted on Amazon S3 | <span id="counter">Loading...</span>
+        </p>
     </div>
-	<script>
-    const counter = document.getElementById("counter");
-    async function updateCounter() {
-        try {
-            // REPLACE WITH YOUR API GATEWAY URL
-            let response = await fetch("https://5tgkcu8z77.execute-api.us-east-1.amazonaws.com/count");
-            let data = await response.json();
-            counter.innerHTML = data.count;
-        } catch (e) {
-            counter.innerHTML = "Error";
-        }
-    }
-    updateCounter();
-</script>
 
+    <!-- YOUR COUNTER SCRIPT (DO NOT DELETE) -->
+    <script>
+        // Use the API URL you already fixed!
+        fetch('http://johncarloesp-2026.s3-website-us-east-1.amazonaws.com/prod/visits')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('counter').innerText = `Visitors: ${data}`;
+            })
+            .catch(err => {
+                console.error(err);
+                document.getElementById('counter').innerText = 'Views: Error'; 
+            });
+    </script>
 </body>
 </html>
