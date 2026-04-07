@@ -47,7 +47,7 @@
     <!-- YOUR COUNTER SCRIPT (DO NOT DELETE) -->
     <script>
         // Use the API URL you already fixed!
-        fetch('http://johncarloesp-2026.s3-website-us-east-1.amazonaws.com/prod/visits')
+        fetch('https://johncarloesp-2026.s3-website-us-east-1.amazonaws.com/prod/visits')
             .then(response => response.json())
             .then(data => {
                 document.getElementById('counter').innerText = `Visitors: ${data}`;
