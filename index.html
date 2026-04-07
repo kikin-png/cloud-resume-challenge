@@ -47,7 +47,7 @@
     <!-- YOUR COUNTER SCRIPT (DO NOT DELETE) -->
     <script>
         // Use the API URL you already fixed!
-        fetch('https://5tgkcu8z77.execute-api.us-east-1.amazonaws.com/prod/visits')
+        fetch('https://5tgkcu8z77.execute-api.us-east-1.amazonaws.com/count')
             .then(response => response.json())
             .then(data => {
                 document.getElementById('counter').innerText = `Visitors: ${data}`;
