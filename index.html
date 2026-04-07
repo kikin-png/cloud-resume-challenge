@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+     <meta charset="UTF-8">
+    <title>John Carlo Espregante - Cloud Resume</title>
+    ...
     <title>John Carlo Espregante - Cloud Resume</title>
     <link rel="stylesheet" href="style.css">
     <!-- Font Awesome for Icons (Optional) -->
@@ -49,13 +52,11 @@
         // Use the API URL you already fixed!
         fetch('https://5tgkcu8z77.execute-api.us-east-1.amazonaws.com/count')
             .then(response => response.json())
-            .then(data => {
-                document.getElementById('counter').innerText = `Visitors: ${data}`;
-            })
-            .catch(err => {
-                console.error(err);
-                document.getElementById('counter').innerText = 'Views: Error'; 
-            });
+ // ... inside your fetch ...
+.then(data => {
+    // CHANGE THIS LINE: Add .count (or .views) after data
+    document.getElementById('counter').innerText = `Visitors: ${data.count}`;
+});
     </script>
 </body>
 </html>
