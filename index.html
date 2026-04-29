@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="UTF-8">
+    <title>John Carlo Espregante - Cloud Resume</title>
+    ...
+    <title>John Carlo Espregante - Cloud Resume</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for Icons (Optional) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="main-container">
+        <!-- HEADER SECTION -->
+        <h1>John Carlo Espregante</h1>
+        <p class="subtitle">Cloud DevOps Engineer | AWS Certified</p>
+        <p> Still ang pinakabagsik sakatanan kalibutan</p>
+        <div class="divider"></div>
+
+        <!-- SKILLS SECTION -->
+        <div class="section">
+            <h3><i class="fas fa-bolt"></i> Skills</h3>
+            <p>AWS (Lambda, S3, API Gateway, DynamoDB) • Python • CI/CD • Linux • Terraform</p>
+        </div>
+
+        <!-- CERTIFICATIONS SECTION -->
+        <div class="section">
+            <h3><i class="fas fa-certificate"></i> Certifications</h3>
+            <ul style="list-style: none; padding: 0;">
+                <li>AWS Certified Cloud Practitioner (2025)</li>
+                <li>AWS Certified Solutions Architect (In Progress)</li>
+            </ul>
+        </div>
+
+        <!-- EXPERIENCE SECTION -->
+        <div class="section">
+            <h3><i class="fas fa-briefcase"></i> Experience</h3>
+            <p><strong>IT Specialist</strong> | 2023 - Present</p>
+            <p>Managing network infrastructure and cloud migrations for enterprise clients.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- FOOTER & COUNTER -->
+        <p id="counter-container">
+            Hosted on Amazon S3 | <span id="counter">Loading...</span>
+        </p>
+    </div>
+
+    <!-- YOUR COUNTER SCRIPT (DO NOT DELETE) -->
+    <script>
+        // Use the API URL you already fixed!
+        fetch('https://5tgkcu8z77.execute-api.us-east-1.amazonaws.com/count')
+            .then(response => response.json())
+ // ... inside your fetch ...
+.then(data => {
+    // CHANGE THIS LINE: Add .count (or .views) after data
+    document.getElementById('counter').innerText = `Visitors: ${data.count}`;
+});
+    </script>
+</body>
+</html>

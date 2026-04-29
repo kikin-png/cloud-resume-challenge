@@ -1,0 +1,51 @@
+/* 1. Global Reset & Fonts */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a2e; /* Dark Navy Background */
+    color: #e0e0e0; /* Light Grey Text */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full screen height */
+    text-align: center;
+}
+
+/* 2. The Main Card Container */
+body > *:not(script) { 
+    /* This is a trick to wrap your existing text in a virtual card */
+    max-width: 600px;
+    padding: 40px;
+    background: #16213e; /* Slightly lighter navy */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    border: 1px solid #0f3460;
+}
+
+/* 3. Typography */
+h1 {
+    color: #e94560; /* Cyberpunk Red/Pink for Name */
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #aeb8c4;
+}
+
+/* 4. The Visitor Counter (The Star of the Show) */
+#counter {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #e94560;
+    color: white;
+    font-weight: bold;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 15px rgba(233, 69, 96, 0.4);
+}
